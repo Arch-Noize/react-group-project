@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b>React Bookstore</b></h1>
+  <h1><b>React Space Group Project</b></h1>
 </div>
 
 # 📗 Table of Contents
@@ -27,24 +27,25 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📚 React Bookstore! <a name="about-project"></a>
+# 🚀 Spaceships and Dragons! <a name="about-project"></a>
 
 This project aims to be a full bookstore with plenty of features!
 
 ## 🛠 Built With <a name="built-with"></a>
 - Node.js
 - React
-- CSS
+- Redux
 
 ### Tech Stack <a name="tech-stack"></a>
 Website currently uses:
 - Node.js
-- and the React library
+- React library
+- Redux Toolkit
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-This website shows a list of books with basic information and functions!
+This website shows a list of rockets, dragons, and missions with basic information and functions!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,8 +75,8 @@ In order to run this project you need:
 Example commands:
 
 ```sh
-  git https://github.com/Arch-Noize/bookstore-react.git
-  cd bookstore-react
+  git https://github.com/Arch-Noize/react-group-project.git
+  cd react-group-project
 ```
 
 ### Install
@@ -118,19 +119,27 @@ npx eslint "**/*.{js,jsx}"
 
 ## 👥 Author <a name="authors"></a>
 
+👤 **Collins Akorda**
+- Github: [@firstpj](https://github.com/firstpj)
+- LinkedIn: [Collins Akorda](https://www.linkedin.com/in/collins-akorda-bb46b2232/)
+
 👤 **Santiago Ruido**
 
 - GitHub: [@Arch-Noize](https://github.com/Arch-Noize)
 - LinkedIn: [Santiago Ruido](https://www.linkedin.com/in/santiago-ruido-a1404880/)
+
+👤 **Victor Correia**
+- GitHub: [@dvcorreia1984](https://github.com/dvcorreia1984)
+- LinkedIn: [Victor Correia](https://www.linkedin.com/in/dvcorreia/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 Allow users to be able to:
-- Add a new book to the collection, with title and author.
-- Remove a book from the collection.
-- Categorize books.
+- See a list of rockets and dragons.
+- Reserve missions with said rockets and dragons.
+- Get in and out of missions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
