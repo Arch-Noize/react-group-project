@@ -1,7 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Dragons from './components/Dragons';
 import HomePage from './pages/HomePage';
+import RocketsPage from './pages/RocketsPage';
+import DragonsPage from './components/Dragons';
+import MissionsPage from './pages/MissionsPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -9,7 +12,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="dragons" element={<Dragons />} />
+        <Route path="rockets" element={<RocketsPage />} />
+        <Route path="dragons" element={<DragonsPage />} />
+        <Route path="missions" element={<MissionsPage />} />
+        <Route path="profile" element={<ProfilePage />} />
       </Routes>
     </>
   );

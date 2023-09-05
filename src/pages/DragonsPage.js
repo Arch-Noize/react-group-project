@@ -5,6 +5,7 @@ const DragonsPage = () => (
     <h2>Dragons</h2>
     <Dragons />
   </div>
+  /* Here add all your components needed for your tab or feature */
 );
 
 export default DragonsPage;
