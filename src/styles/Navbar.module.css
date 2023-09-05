@@ -1,0 +1,43 @@
+.logo {
+  transform: scale(0.5);
+  max-width: 20%;
+  max-height: 10%;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 1em;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  padding: 0.8rem;
+  align-items: center;
+  border-bottom: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.navItem {
+  padding: 1em;
+  font-size: 0.8em;
+  font-weight: 200;
+  transition: all 0.5s ease;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+}
+
+.list a.active {
+  background-color: aqua;
+  color: white;
+  font-size: 1em;
+  font-weight: 300;
+}
