@@ -1,0 +1,8 @@
+h3#missions {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  display: flex;
+}

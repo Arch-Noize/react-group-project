@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from '../redux/mission/missionSlice';
+import '../styles/Missions.module.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions.missions);
@@ -11,15 +12,12 @@ const Missions = () => {
   }, [dispatch]);
 
   return (
-    <h3>
+    <h3 id="missions">
       {missions.map((mission) => (
         <li key={mission.id}>
-          <h3>Mission</h3>
           <h2>{mission.name}</h2>
-          <h3>Description</h3>
           <p>{mission.description}</p>
-          <p>Mission status</p>
-          <p>Join status</p>
+          <button type="button">Join </button>
         </li>
       ))}
     </h3>
