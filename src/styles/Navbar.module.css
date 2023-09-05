@@ -33,9 +33,10 @@ h1 {
   display: flex;
   justify-content: flex-end;
   gap: 0.5em;
+  transition: all 0.4s ease-in-out;
 }
 
-.list a.active {
+.list a:active {
   background-color: aqua;
   color: white;
   font-size: 1em;
