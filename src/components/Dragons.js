@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addReservation, cancelReservation } from '../redux/dragons/dragonSlice';
+import { addReservation, cancelReservation, getDragons } from '../redux/dragons/dragonSlice';
 import styles from '../styles/Dragons.module.css';
 
 const Dragons = () => {
   const dragons = useSelector((state) => state.dragons.dragons);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getDragons());
+  }, []);
 
   return (
     <>
