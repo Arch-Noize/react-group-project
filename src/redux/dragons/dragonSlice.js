@@ -8,14 +8,40 @@ const initialState = {
 
 export const getDragons = createAsyncThunk('dragons/getDragons', async () => {
   const res = await axios.get('https://api.spacexdata.com/v4/dragons');
-  return res.data;
+  const { data } = res;
+  return data.map((dragon) => ({
+    name: dragon.name,
+    desc: dragon.description,
+    id: dragon.id,
+    img: dragon.flickr_images[1],
+    reserved: dragon.reserved,
+  }));
 });
 
 const dragonSlice = createSlice({
   name: 'dragons',
   initialState,
   reducers: {
-
+    addReservation: (state, action) => {
+      const dragonID = action.payload;
+      console.log(dragonID);
+      state.dragons = state.dragons.map((dragon) => {
+        if (dragon.id === dragonID) {
+          return { ...dragon, reserved: true };
+        }
+        return dragon;
+      });
+    },
+    cancelReservation: (state, action) => {
+      const dragonID = action.payload;
+      console.log(dragonID);
+      state.dragons = state.dragons.map((dragon) => {
+        if (dragon.id === dragonID) {
+          return { ...dragon, reserved: false };
+        }
+        return dragon;
+      });
+    },
   },
   extraReducers: {
     [getDragons.pending]: (state) => {
@@ -31,6 +57,6 @@ const dragonSlice = createSlice({
   },
 });
 
-// export const { } = dragonSlice.actions;
+export const { addReservation, cancelReservation } = dragonSlice.actions;
 
 export default dragonSlice.reducer;
