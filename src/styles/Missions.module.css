@@ -27,6 +27,6 @@ th {
   min-width: 10%;
 }
 
-div#join {
-  background-color: aqua;
+.centered-cell {
+  position: relative;
 }

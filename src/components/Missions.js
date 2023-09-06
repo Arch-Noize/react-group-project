@@ -30,7 +30,7 @@ const Missions = () => {
             <tr key={mission.id} className={index % 2 === 0 ? 'alternate-row' : ''}>
               <td style={{ fontWeight: '600' }}>{mission.name}</td>
               <td>{mission.description}</td>
-              <td>
+              <td className="text-center align-middle">
                 {mission.reserved ? (
                   <>
                     <Badge bg="info">Active Member</Badge>
@@ -41,13 +41,11 @@ const Missions = () => {
                   </>
                 )}
               </td>
-              <td>
+              <td className="text-center align-middle">
                 {mission.reserved ? (
-                  <>
-                    <Button variant="outline-danger" onClick={() => dispatch(leaveMission(mission.id))}>
-                      Leave Mission
-                    </Button>
-                  </>
+                  <Button variant="outline-danger" onClick={() => dispatch(leaveMission(mission.id))}>
+                    Leave Mission
+                  </Button>
                 ) : (
                   <Button variant="outline-dark" onClick={() => dispatch(joinMission(mission.id))}>
                     Join Mission
