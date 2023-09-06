@@ -15,7 +15,7 @@ const Missions = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="table">
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -56,7 +56,7 @@ const Missions = () => {
           ))}
         </tbody>
       </Table>
-    </>
+    </div>
   );
 };
 
