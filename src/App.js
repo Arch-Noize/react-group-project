@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import SpaceNavbar from './components/Navbar';
 import RocketsList from './components/RocketList';
 import Dragons from './components/Dragons';
@@ -18,10 +18,13 @@ function App() {
     <>
       <SpaceNavbar />
       <Routes>
-        <Route path="rockets" element={<RocketsList />} />
-        <Route path="dragons" element={<Dragons />} />
-        <Route path="missions" element={<Missions />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="/">
+          <Route index element={<Navigate to="rockets" replace />} />
+          <Route path="rockets" element={<RocketsList />} />
+          <Route path="dragons" element={<Dragons />} />
+          <Route path="missions" element={<Missions />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
       </Routes>
     </>
   );
