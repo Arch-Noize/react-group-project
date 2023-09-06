@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Table } from 'react-bootstrap';
+import { Badge, Button, Table } from 'react-bootstrap';
 import { getMissions, joinMission, leaveMission } from '../redux/mission/missionSlice'; // You need to import these action functions.
 import '../styles/Missions.module.css';
 
@@ -21,8 +21,8 @@ const Missions = () => {
           <tr>
             <th style={{ width: '10%' }}>Mission</th>
             <th>Description</th>
+            <th style={{ width: '15%' }}> </th>
             <th style={{ width: '15%' }}>Status</th>
-            <th style={{ width: '15%' }}>Join</th>
           </tr>
         </thead>
         <tbody>
@@ -33,13 +33,23 @@ const Missions = () => {
               <td>
                 {mission.reserved ? (
                   <>
-                    <span>Active Member</span>
-                    <Button onClick={() => dispatch(leaveMission(mission.id))}>
+                    <Badge bg="info">Active Member</Badge>
+                  </>
+                ) : (
+                  <>
+                    <Badge bg="secondary">NOT A MEMBER</Badge>
+                  </>
+                )}
+              </td>
+              <td>
+                {mission.reserved ? (
+                  <>
+                    <Button variant="outline-danger" onClick={() => dispatch(leaveMission(mission.id))}>
                       Leave Mission
                     </Button>
                   </>
                 ) : (
-                  <Button onClick={() => dispatch(joinMission(mission.id))}>
+                  <Button variant="outline-dark" onClick={() => dispatch(joinMission(mission.id))}>
                     Join Mission
                   </Button>
                 )}

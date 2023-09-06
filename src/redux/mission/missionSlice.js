@@ -7,7 +7,6 @@ export const getMissions = createAsyncThunk(
   async () => {
     const response = await fetch('https://api.spacexdata.com/v3/missions');
     const data = await response.json();
-    console.log(data);
     return data.map((mission) => ({
       name: mission.mission_name,
       description: mission.description,
