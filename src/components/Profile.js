@@ -6,7 +6,7 @@ const Profile = () => {
   const resDragons = dragons.filter((dragon) => dragon.reserved);
 
   return (
-    <>
+    <div className="profile">
       <h2>Reserved Dragons</h2>
       <ul>
         {resDragons.map((dragon) => (
@@ -15,7 +15,7 @@ const Profile = () => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 
