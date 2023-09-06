@@ -23,16 +23,16 @@ const Missions = () => {
             <th>Join</th>
           </tr>
         </thead>
-        {missions.map((mission) => (
-          <tbody key={mission.id}>
-            <tr>
+        <tbody>
+          {missions.map((mission, index) => ( // Add 'index' parameter here
+            <tr key={mission.id} className={index % 2 === 0 ? 'alternate-row' : ''}>
               <td>{mission.name}</td>
               <td>{mission.description}</td>
               <td>{mission.status}</td>
-              <Button>Join</Button>
+              <td><Button>Join</Button></td>
             </tr>
-          </tbody>
-        ))}
+          ))}
+        </tbody>
       </Table>
     </>
   );

@@ -23,3 +23,7 @@ h4 {
 h4#description {
   width: 100px;
 }
+
+.alternate-row {
+  background-color: white;
+}
