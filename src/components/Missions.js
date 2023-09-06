@@ -12,15 +12,23 @@ const Missions = () => {
   }, []);
 
   return (
-    <h3 id="missions">
-      {missions.map((mission) => (
-        <li key={mission.id}>
-          <h2>{mission.name}</h2>
-          <p>{mission.description}</p>
-          <button type="button">Join </button>
-        </li>
-      ))}
-    </h3>
+    <div>
+      <header>
+        <h4>Mission</h4>
+        <h4 id="description">Description</h4>
+        <h4>Status</h4>
+        <h4>Join</h4>
+      </header>
+      <h3 id="missions">
+        {missions.map((mission) => (
+          <li key={mission.id}>
+            <h2>{mission.name}</h2>
+            <p>{mission.description}</p>
+            <button type="button">Join </button>
+          </li>
+        ))}
+      </h3>
+    </div>
   );
 };
 

@@ -6,3 +6,20 @@ h3#missions {
 li {
   display: flex;
 }
+
+header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+h4 {
+  display: flex;
+  width: 15%;
+  padding-left: 10px;
+  border: 1px solid lightgray;
+  height: 30px;
+}
+
+h4#description {
+  width: 100px;
+}
