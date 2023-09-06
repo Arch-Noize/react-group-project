@@ -9,7 +9,7 @@ const Missions = () => {
 
   useEffect(() => {
     dispatch(getMissions());
-  }, [dispatch]);
+  }, []);
 
   return (
     <h3 id="missions">
