@@ -19,16 +19,16 @@ const Missions = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th style={{ width: '10%' }}>Mission</th>
+            <th style={{ width: '12%' }}>Mission</th>
             <th>Description</th>
-            <th style={{ width: '15%' }}> </th>
-            <th style={{ width: '15%' }}>Status</th>
+            <th>Status</th>
+            <th style={{ width: '12%' }}> </th>
           </tr>
         </thead>
         <tbody>
           {missions.map((mission, index) => (
             <tr key={mission.id} className={index % 2 === 0 ? 'alternate-row' : ''}>
-              <td style={{ fontWeight: '600' }}>{mission.name}</td>
+              <td style={{ fontWeight: '700' }}>{mission.name}</td>
               <td>{mission.description}</td>
               <td className="text-center align-middle">
                 {mission.reserved ? (
