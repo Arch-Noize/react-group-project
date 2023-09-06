@@ -6,7 +6,7 @@ const RocketsPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchRockets());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
