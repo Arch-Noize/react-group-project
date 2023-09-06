@@ -17,19 +17,23 @@ const Missions = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Mission</th>
+            <th style={{ width: '10%' }}>Mission</th>
             <th>Description</th>
-            <th>Status</th>
-            <th>Join</th>
+            <th style={{ width: '10%' }}>Status</th>
+            <th style={{ width: '15%' }}>Join</th>
           </tr>
         </thead>
         <tbody>
-          {missions.map((mission, index) => ( // Add 'index' parameter here
+          {missions.map((mission, index) => (
             <tr key={mission.id} className={index % 2 === 0 ? 'alternate-row' : ''}>
               <td>{mission.name}</td>
               <td>{mission.description}</td>
               <td>{mission.status}</td>
-              <td><Button variant="outline-dark">Join Mission</Button></td>
+              <td>
+                <div id="join">
+                  <Button variant="outline-dark" className="join-button">Join Mission</Button>
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>
