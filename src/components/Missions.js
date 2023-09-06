@@ -29,7 +29,7 @@ const Missions = () => {
               <td>{mission.name}</td>
               <td>{mission.description}</td>
               <td>{mission.status}</td>
-              <td><Button>Join</Button></td>
+              <td><Button variant="outline-dark">Join Mission</Button></td>
             </tr>
           ))}
         </tbody>

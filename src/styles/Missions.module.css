@@ -14,16 +14,15 @@ header {
 
 h4 {
   display: flex;
-  width: 15%;
   padding-left: 10px;
   border: 1px solid lightgray;
   height: 30px;
 }
 
-h4#description {
-  width: 100px;
-}
-
 .alternate-row {
   background-color: white;
+}
+
+th {
+  min-width: 10%;
 }
