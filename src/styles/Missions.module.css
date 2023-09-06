@@ -26,3 +26,7 @@ h4 {
 th {
   min-width: 10%;
 }
+
+div#join {
+  background-color: aqua;
+}
