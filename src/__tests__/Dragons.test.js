@@ -6,6 +6,10 @@ import Dragons from '../components/Dragons';
 
 const mockStore = configureMockStore([]);
 
+jest.mock('axios', () => ({
+    get: jest.fn(),
+  }));
+
 describe('Loading dragons component', () => {
 
   it('renders correctly', () => {
