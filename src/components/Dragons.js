@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  Container, Row, Col, Button,
+  Container, Row, Col, Button, Badge,
 } from 'react-bootstrap/';
 import { addReservation, cancelReservation } from '../redux/dragons/dragonSlice';
 import styles from '../styles/Dragons.module.css';
@@ -21,7 +21,16 @@ const Dragons = () => {
             <Col>
               <h2>{dragon.name}</h2>
               <p>{dragon.type}</p>
-              <p>{dragon.desc}</p>
+              {dragon.reserved ? (
+                <>
+                  <span>
+                    <Badge bg="info">Reserved</Badge>
+                  </span>
+                  <p>{dragon.desc}</p>
+                </>
+              ) : (
+                <p>{dragon.desc}</p>
+              )}
               {dragon.reserved ? (
                 <Button variant="outline-light" type="button" onClick={() => dispatch(cancelReservation(dragon.id))}>
                   Cancel Dragon

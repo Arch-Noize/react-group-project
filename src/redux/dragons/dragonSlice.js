@@ -15,7 +15,7 @@ export const getDragons = createAsyncThunk('dragons/getDragons', async () => {
     type: dragon.type,
     id: dragon.id,
     img: dragon.flickr_images[1],
-    reserved: dragon.reserved,
+    reserved: false,
   }));
 });
 

@@ -3,7 +3,7 @@ import { Stack, Nav, Navbar } from 'react-bootstrap/';
 import logo from '../styles/planet.png';
 
 const SpaceNavbar = () => (
-  <Navbar bg="light" data-bs-theme="light">
+  <Navbar bg="light" data-bs-theme="light" style={{ backgroundColor: '#fff' }}>
     <Stack direction="horizontal" gap={1}>
       <Nav className="me-auto nav">
         <img src={logo} className="logo" alt="" />

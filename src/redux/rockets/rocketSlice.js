@@ -23,7 +23,6 @@ export const rocketSlice = createSlice({
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: true };
       });
-      console.log('newState');
       return {
         ...state,
         rockets: updatedRockets,
@@ -34,7 +33,6 @@ export const rocketSlice = createSlice({
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: false };
       });
-      console.log('newState');
       return {
         ...state,
         rockets: updatedRockets,

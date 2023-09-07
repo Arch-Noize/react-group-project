@@ -29,6 +29,7 @@ const Rocket = ({
             type="button"
             onClick={() => {
               handleReserve(id);
+              console.log(id);
             }}
           >
             Reserve Rocket
@@ -40,6 +41,7 @@ const Rocket = ({
             className="font-normal text-base p-2 mt-1 rounded text-gray-500 border border-double border-gray-500"
             onClick={() => {
               handleUnReserve(id);
+              console.log(id);
             }}
           >
             Cancel reservation
