@@ -1,5 +1,4 @@
 body {
-  color: rgb(20, 189, 57);
   margin: 0;
   font-family:
     -apple-system,
@@ -28,6 +27,10 @@ code {
     monospace;
 }
 
+p {
+  font-size: 1.1em;
+}
+
 /* Navbar */
 
 a {
@@ -35,7 +38,6 @@ a {
 }
 
 .logo {
-  background-color: rgb(155, 158, 111);
   transform: scale(0.5);
   max-width: 10%;
   max-height: 10%;
@@ -44,7 +46,9 @@ a {
 
 .nav {
   align-items: center;
-  background-color: #865c7f;
+  border-bottom: 1px solid grey;
+  border-radius: 3px;
+  width: 100%;
 }
 
 .navItem {

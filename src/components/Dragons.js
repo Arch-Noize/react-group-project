@@ -4,7 +4,7 @@ import {
   Container, Row, Col, Button, Badge,
 } from 'react-bootstrap/';
 import { addReservation, cancelReservation } from '../redux/dragons/dragonSlice';
-import styles from '../styles/Dragons.module.css';
+import styles from '../styles/Cards.module.css';
 
 const Dragons = () => {
   const dragons = useSelector((state) => state.dragons.dragons);
@@ -12,31 +12,46 @@ const Dragons = () => {
 
   return (
     <>
-      <Container className={styles.dragonCard}>
+      <Container className={styles.card}>
         {dragons.map((dragon) => (
-          <Row key={dragon.id} className={styles.dragonList}>
+          <Row key={dragon.id} className={styles.list}>
             <Col>
               <img src={dragon.img} alt="" className={styles.image} />
             </Col>
             <Col>
-              <h2>{dragon.name}</h2>
-              <p>{dragon.type}</p>
+              <h3>{dragon.name}</h3>
+              <h5>
+                Type:
+                {' '}
+                {dragon.type}
+              </h5>
               {dragon.reserved ? (
                 <>
-                  <span>
-                    <Badge bg="info">Reserved</Badge>
-                  </span>
-                  <p>{dragon.desc}</p>
+                  <p>
+                    <span className="mx-1">
+                      <Badge bg="info">Reserved</Badge>
+                    </span>
+                    {dragon.desc}
+                  </p>
                 </>
               ) : (
                 <p>{dragon.desc}</p>
               )}
               {dragon.reserved ? (
-                <Button variant="outline-light" type="button" onClick={() => dispatch(cancelReservation(dragon.id))}>
+                <Button
+                  variant="outline-dark"
+                  type="button"
+                  onClick={() => dispatch(cancelReservation(dragon.id))}
+                >
                   Cancel Dragon
                 </Button>
               ) : (
-                <Button variant="primary" type="button" onClick={() => dispatch(addReservation(dragon.id))}>
+                <Button
+                  variant="primary"
+                  type="button"
+                  style={{ color: '#fff' }}
+                  onClick={() => dispatch(addReservation(dragon.id))}
+                >
                   Reserve Dragon
                 </Button>
               )}

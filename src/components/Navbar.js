@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import { Stack, Nav, Navbar } from 'react-bootstrap/';
+import { Container, Nav, Navbar } from 'react-bootstrap/';
 import logo from '../styles/planet.png';
 
 const SpaceNavbar = () => (
-  <Navbar bg="light" data-bs-theme="light" style={{ backgroundColor: '#fff' }}>
-    <Stack direction="horizontal" gap={1}>
-      <Nav className="me-auto nav">
+  <Container fluid>
+    <Navbar bg="light" data-bs-theme="light">
+      <Nav className="m-auto nav">
         <img src={logo} className="logo" alt="" />
 
         <Navbar.Brand className="p-2">
@@ -31,8 +31,8 @@ const SpaceNavbar = () => (
         </Nav.Link>
 
       </Nav>
-    </Stack>
-  </Navbar>
+    </Navbar>
+  </Container>
 );
 
 export default SpaceNavbar;

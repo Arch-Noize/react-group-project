@@ -14,7 +14,7 @@ const RocketList = () => {
           name={rocket.name}
           images={rocket.flickr_images[0]}
           description={rocket.description}
-          reserved={false}
+          reserved={rocket.reserved}
         />
       ))}
     </>
