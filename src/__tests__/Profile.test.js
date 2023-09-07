@@ -10,13 +10,13 @@ describe('Loading profile component', () => {
   it('renders correctly', () => {
     const store = mockStore({
       rockets: {
-        rockets: []
+        rockets: [],
       },
       dragons: {
-        dragons: []
+        dragons: [],
       },
       missions: {
-        missions: []
+        missions: [],
       },
     });
 

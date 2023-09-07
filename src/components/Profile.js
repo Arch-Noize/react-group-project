@@ -17,7 +17,7 @@ const Profile = () => {
       <h2>{title}</h2>
       <Table bordered hover>
         <tbody>
-          {items.map((item, index) => (
+          {items.map((item) => (
             <tr key={item.id}>
               <td>{item.name}</td>
             </tr>
