@@ -1,4 +1,5 @@
 body {
+  color: rgb(20, 189, 57);
   margin: 0;
   font-family:
     -apple-system,
@@ -34,6 +35,7 @@ a {
 }
 
 .logo {
+  background-color: rgb(155, 158, 111);
   transform: scale(0.5);
   max-width: 10%;
   max-height: 10%;
@@ -42,7 +44,7 @@ a {
 
 .nav {
   align-items: center;
-  background-color: #fff;
+  background-color: #865c7f;
 }
 
 .navItem {
