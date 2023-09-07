@@ -10,7 +10,7 @@ const RocketsPage = () => {
 
   return (
     <div>
-      <h2>Rockets</h2>
+      <h2>Rocket</h2>
       {/* <Rockets /> */}
     </div>
     /* Here add all your components needed for your tab or feature */
