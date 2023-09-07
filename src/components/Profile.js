@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
@@ -19,12 +18,7 @@ const Profile = () => {
       <Table bordered hover>
         <tbody>
           {items.map((item, index) => (
-            <tr
-              key={item.id}
-              className={`${
-                index === 0 ? 'rounded-top' : index === items.length - 1 ? 'rounded-bottom' : ''
-              }`}
-            >
+            <tr key={item.id}>
               <td>{item.name}</td>
             </tr>
           ))}
