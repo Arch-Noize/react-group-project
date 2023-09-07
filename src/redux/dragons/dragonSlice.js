@@ -12,6 +12,7 @@ export const getDragons = createAsyncThunk('dragons/getDragons', async () => {
   return data.map((dragon) => ({
     name: dragon.name,
     desc: dragon.description,
+    type: dragon.type,
     id: dragon.id,
     img: dragon.flickr_images[1],
     reserved: dragon.reserved,

@@ -4,7 +4,7 @@ import logo from '../styles/planet.png';
 
 const SpaceNavbar = () => (
   <Navbar bg="light" data-bs-theme="light">
-    <Stack direction="horizontal" gap={6}>
+    <Stack direction="horizontal" gap={1}>
       <Nav className="me-auto nav">
         <img src={logo} className="logo" alt="" />
 
