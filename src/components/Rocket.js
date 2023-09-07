@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket, unReserveRocket } from '../redux/rockets/rocketSlice';
 
-const Rocket = ({ id, name, description, images, reserved }) => {
+const Rocket = ({
+  id, name, description, images, reserved,
+}) => {
   const dispatch = useDispatch();
   const handleReserve = (id) => {
     dispatch(reserveRocket(id));

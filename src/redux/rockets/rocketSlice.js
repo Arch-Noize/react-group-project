@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-// import { updateState } from './actions';
 
 const initialState = {
   rockets: [],
@@ -8,16 +7,11 @@ const initialState = {
   isError: undefined,
 };
 
-const rocketUrl = 'https://api.spacexdata.com/v4/rockets';
-
-export const fetchRockets = createAsyncThunk('fetchrockets', async (rejectedWithValue) => {
-  try {
-    const response = await axios.get(rocketUrl);
-    return response.data;
-  } catch (error) {
-    console.log(error);
-    return rejectedWithValue(error.message);
-  }
+export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
+  const response = await axios.get('https://api.spacexdata.com/v4/rockets');
+  const { data } = response;
+  console.log(data);
+  return data;
 });
 
 export const rocketSlice = createSlice({
