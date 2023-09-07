@@ -8,7 +8,6 @@
   display: grid;
   grid-template-columns: 20% 70% 10%;
   grid-template-rows: 30% 30%;
-  height: fit-content;
   margin-bottom: 3em;
   gap: 30px;
 }
