@@ -22,7 +22,7 @@ describe('Loading navbar component', () => {
         <Navbar />
       </BrowserRouter>,
     );
-    
+
     const rockets = screen.getByRole('link', { name: 'Rockets' });
     const dragons = screen.getByRole('link', { name: 'Dragons' });
     const missions = screen.getByRole('link', { name: 'Missions' });

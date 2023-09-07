@@ -13,16 +13,8 @@
   gap: 30px;
 }
 
-.dragonList > button {
-  grid-column: 2;
-  grid-row: 4; 
-  max-width: fit-content;
-}
-
 .image {
   display: inline-block;
-  grid-column: 1 / 1;
-  grid-row: 1 / 3; 
-  width: 150px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
 }

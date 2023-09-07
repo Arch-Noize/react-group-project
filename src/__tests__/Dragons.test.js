@@ -7,29 +7,28 @@ import Dragons from '../components/Dragons';
 const mockStore = configureMockStore([]);
 
 jest.mock('axios', () => ({
-    get: jest.fn(),
-  }));
+  get: jest.fn(),
+}));
 
 describe('Loading dragons component', () => {
-
   it('renders correctly', () => {
     const initialState = {
       dragons: {
         dragons: [
           {
-            id: 1, 
-            name: 'Dragon 1', 
-            type: 'Type 1', 
-            flickr_images: ['image1.jpg'], 
+            id: 1,
+            name: 'Dragon 1',
+            type: 'Type 1',
+            flickr_images: ['image1.jpg'],
             reserved: false,
           },
-        ] 
-      }
+        ],
+      },
     };
 
     const store = mockStore(initialState);
 
-    const {tree} = render(
+    const { tree } = render(
       <Provider store={store}>
         <Dragons />
       </Provider>,
