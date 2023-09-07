@@ -30,7 +30,7 @@ const Profile = () => {
           </li>
         ))}
       </ul>
-
+      
       <h2>Reserved Missions</h2>
       <ul>
         {resMissions.map((mission) => (
