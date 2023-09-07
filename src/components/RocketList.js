@@ -1,4 +1,4 @@
-const RocketsPage = () => (
+const RocketsList = () => (
   <div>
     <h2>Rockets</h2>
     {/* <Rockets /> */}
@@ -6,4 +6,4 @@ const RocketsPage = () => (
   /* Here add all your components needed for your tab or feature */
 );
 
-export default RocketsPage;
+export default RocketsList;

@@ -1,4 +1,4 @@
-const MissionsPage = () => (
+const Missions = () => (
   <div>
     <h2>Missions</h2>
     {/* <Missions /> */}
@@ -6,4 +6,4 @@ const MissionsPage = () => (
   /* Here add all your components needed for your tab or feature */
 );
 
-export default MissionsPage;
+export default Missions;

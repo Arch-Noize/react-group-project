@@ -16,10 +16,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-li {
-  list-style: none;
-}
-
 code {
   font-family:
     source-code-pro,
@@ -28,4 +24,46 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+/* Navbar */
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  transform: scale(0.5);
+  max-width: 10%;
+  max-height: 10%;
+  display: inline-block;
+}
+
+.nav {
+  align-items: center;
+}
+
+.navItem {
+  padding: 0.5rem;
+}
+
+.active {
+  transition: all 0.3s ease-in-out;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 1.2em;
+  border-radius: 4px;
+}
+
+.vr {
+  height: 1px;
+  width: 2px;
+  align-self: center;
+}
+
+/* Profile */
+
+.profile {
+  margin: 1em 0 0 1em;
 }

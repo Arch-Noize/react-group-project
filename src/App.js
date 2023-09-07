@@ -1,21 +1,30 @@
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomePage from './pages/HomePage';
-import RocketsPage from './pages/RocketsPage';
-import DragonsPage from './components/Dragons';
-import MissionsPage from './pages/MissionsPage';
-import ProfilePage from './pages/ProfilePage';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import SpaceNavbar from './components/Navbar';
+import RocketsList from './components/RocketList';
+import Dragons from './components/Dragons';
+import { getDragons } from './redux/dragons/dragonSlice';
+import Missions from './components/Missions';
+import Profile from './components/Profile';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getDragons());
+  }, []);
+
   return (
     <>
-      <Navbar />
+      <SpaceNavbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="rockets" element={<RocketsPage />} />
-        <Route path="dragons" element={<DragonsPage />} />
-        <Route path="missions" element={<MissionsPage />} />
-        <Route path="profile" element={<ProfilePage />} />
+        <Route path="/">
+          <Route index element={<Navigate to="rockets" replace />} />
+          <Route path="rockets" element={<RocketsList />} />
+          <Route path="dragons" element={<Dragons />} />
+          <Route path="missions" element={<Missions />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
       </Routes>
     </>
   );
