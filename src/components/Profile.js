@@ -1,5 +1,7 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Table from 'react-bootstrap/Table';
 
 const Profile = () => {
   const { rockets } = useSelector((state) => state.rockets);
@@ -11,34 +13,33 @@ const Profile = () => {
   const { missions } = useSelector((state) => state.missions);
   const resMissions = missions.filter((mission) => mission.reserved);
 
+  const renderReservedItemsTable = (items, title) => (
+    <div className="table">
+      <h2>{title}</h2>
+      <Table bordered hover>
+        <tbody>
+          {items.map((item, index) => (
+            <tr
+              key={item.id}
+              className={`${
+                index === 0 ? 'rounded-top' : index === items.length - 1 ? 'rounded-bottom' : ''
+              }`}
+            >
+              <td>{item.name}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </div>
+  );
+
   return (
     <div className="profile">
-      <h2>Reserved Rockets</h2>
-      <ul>
-        {resRockets.map((rocket) => (
-          <li key={rocket.id}>
-            {rocket.name}
-          </li>
-        ))}
-      </ul>
-
-      <h2>Reserved Dragons</h2>
-      <ul>
-        {resDragons.map((dragon) => (
-          <li key={dragon.id}>
-            {dragon.name}
-          </li>
-        ))}
-      </ul>
-
-      <h2>Reserved Missions</h2>
-      <ul>
-        {resMissions.map((mission) => (
-          <li key={mission.id}>
-            {mission.name}
-          </li>
-        ))}
-      </ul>
+      <div className="table-container">
+        {renderReservedItemsTable(resRockets, 'Reserved Rockets')}
+        {renderReservedItemsTable(resDragons, 'Reserved Dragons')}
+        {renderReservedItemsTable(resMissions, 'Reserved Missions')}
+      </div>
     </div>
   );
 };

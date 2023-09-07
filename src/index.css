@@ -69,3 +69,25 @@ a {
 .profile {
   margin: 1em 0 0 1em;
 }
+
+.table-container {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.table {
+  flex: 0 0 calc(33.33% - 10px);
+  margin-right: 10px;
+}
+
+.rounded-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.rounded-bottom {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
