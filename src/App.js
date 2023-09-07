@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import SpaceNavbar from './components/Navbar';
 import RocketsList from './components/RocketList';
+import { fetchRockets } from './redux/rockets/rocketSlice';
 import Dragons from './components/Dragons';
 import { getDragons } from './redux/dragons/dragonSlice';
 import Missions from './components/Missions';
@@ -14,6 +15,7 @@ function App() {
   useEffect(() => {
     dispatch(getDragons());
     dispatch(getMissions());
+    dispatch(fetchRockets());
   }, []);
 
   return (
