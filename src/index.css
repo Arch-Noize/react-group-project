@@ -14,10 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-li {
-  list-style: none;
+  padding: 0 10px;
 }
 
 code {
@@ -28,4 +25,65 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+/* Navbar */
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  transform: scale(0.5);
+  max-width: 10%;
+  max-height: 10%;
+  display: inline-block;
+}
+
+.nav {
+  align-items: center;
+  border-bottom: 1px solid #cacacadb;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.navItem {
+  padding: 0.5rem;
+}
+
+.active {
+  transition: all 0.3s ease-in-out;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 1.2em;
+  border-radius: 4px;
+}
+
+.vr {
+  height: 1px;
+  width: 2px;
+  align-self: center;
+}
+
+/* Profile */
+
+.profile {
+  margin: 1em 0 0 1em;
+}
+
+.table-container {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.table {
+  flex: 0 0 calc(33.33% - 10px);
+  margin-right: 10px;
 }

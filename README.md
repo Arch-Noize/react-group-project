@@ -29,12 +29,14 @@
 
 # 🚀 Spaceships and Dragons! <a name="about-project"></a>
 
-This project aims to be a full bookstore with plenty of features!
+This project is a display of space rockets, missions and 'dragons'! All fetched from API. 
 
 ## 🛠 Built With <a name="built-with"></a>
 - Node.js
 - React
 - Redux
+- Redux Toolkit
+- React Bootstrap
 
 ### Tech Stack <a name="tech-stack"></a>
 Website currently uses:
@@ -137,12 +139,9 @@ npx eslint "**/*.{js,jsx}"
 ## 🔭 Future Features <a name="future-features"></a>
 
 Allow users to be able to:
-- See a list of rockets and dragons.
-- Reserve missions with said rockets and dragons.
-- Get in and out of missions.
+- Add new rockets and missions
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- CONTRIBUTING -->
 
@@ -150,7 +149,7 @@ Allow users to be able to:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [Isues Pages](https://github.com/Arch-Noize/javascript-capstone/issues)
+Feel free to check the [Isues Pages](https://github.com/Arch-Noize/react-group-project/issues)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

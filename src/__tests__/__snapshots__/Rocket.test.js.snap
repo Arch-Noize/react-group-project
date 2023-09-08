@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading missions component renders correctly 1`] = `undefined`;
+
+exports[`Loading rockets component renders correctly 1`] = `undefined`;

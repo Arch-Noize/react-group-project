@@ -1,0 +1,32 @@
+h3#missions {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  display: flex;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+h4 {
+  display: flex;
+  padding-left: 10px;
+  border: 1px solid lightgray;
+  height: 30px;
+}
+
+.alternate-row {
+  background-color: white;
+}
+
+th {
+  min-width: 10%;
+}
+
+.centered-cell {
+  position: relative;
+}
